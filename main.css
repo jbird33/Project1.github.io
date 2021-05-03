@@ -10,7 +10,7 @@ body {
 header {
     border: rgb(172, 38, 38) 20px solid;
     border-style: groove;
-    background-color: rgb(73, 181, 207);
+    background-color: rgba(73, 181, 207, .75);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -27,3 +27,50 @@ header h1 {
     font-weight:900;
     color: rgb(245, 243, 243);
     }
+
+.game {
+
+    border: rgb(172, 38, 38) 20px solid;
+    border-style: groove;
+    background-color: rgba(41, 112, 59, .5);
+    color: white;
+    margin-top: 140px;
+    margin-left: 6.5em;
+    width: 20em;
+    display: flex;
+    flex-direction: column;
+    font-size: 3.5em;
+    padding: .5em;
+    
+}
+    
+.question {
+    background-color: rgb(73, 181, 207);
+    display: flex;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    border:rgb(69, 73, 85) solid 3px;
+    padding: 10px;
+}
+
+.answer1 {
+    background-color: rgb(2, 69, 115);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    border:rgb(69, 73, 85) solid 3px;
+    padding: 8px;
+}
+
+.answer2 {
+    background-color: rgb(2, 69, 115);;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    border:rgb(69, 73, 85) solid 3px;
+    padding: 8px;
+}
+
+.game div {
+    
+/* align-content: center; */
+    
+  }
+
+
+
