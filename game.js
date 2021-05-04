@@ -4,8 +4,8 @@ let answer1Box = document.querySelector('.answer1');
 let answer2Box = document.querySelector('.answer2');
 
 //These are the two buttons to listen for to see which answer they choose
-let button1 = document.querySelector('#option1');
-let button2 = document.querySelector('#option2');
+let userAnswer1 = document.querySelector('#option1');
+let userAnswer2 = document.querySelector('#option2');
 
 //Creating an array of objects here
 const qNaList = [
@@ -46,28 +46,46 @@ const qNaList = [
     Answer: 'A: Korg'
     }
 ]
-//My counter for my array position;
-let y = 0;
+//My counter for my array position and score tally;
+let y = 3;
+let score = 0;
 
-
+//This puts the questions up based upon what value y is (where in the array)
+//Also adds the event listener that calls to check if what they selected was correct
 let runQuiz = function() {
-    if(y <= 5) {
+    if(y <= 6) {
         questionShow.innerText = qNaList[y].question;
         answer1Box.innerText = qNaList[y].answer1;
         answer2Box.innerText = qNaList[y].answer2;
-        //stop game and do this
-        y += 1;
+
+        userAnswer1.addEventListener('click', checkA);
+        userAnswer2.addEventListener('click', checkB);        
+    
     }
     else{
-        // for(let n = 0; n <= qNaList.length; n++) {
-            // questionShow.innerText = qNaList[y].question;
-            // answer1Box.innerText = qNaList[y].answer1;
-            // answer2Box.innerText = qNaList[y].answer2;
-
-            
-        // }
+        //Stop the game and tally total
     }
+}
 
+//Checks the answer based upon what button was picked
+let checkA = function() {
+    if (qNaList[y].answer1 === qNaList[y].Answer) {
+        score += 1000;
+        console.log(score);
+    }
+    else {
+        alert('Try Again, True Believers!');
+    }
+}
+
+let checkB = function() {
+    if (qNaList[y].answer2 === qNaList[y].Answer) {
+        score += 1000;
+        console.log(score);
+    }
+    else {
+        alert('Try Again, True Believers!')
+    }
 }
 
 runQuiz();
