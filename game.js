@@ -47,7 +47,7 @@ const qNaList = [
     }
 ]
 //My counter for my array position and score tally;
-let y = 3;
+let y = 0;
 let score = 0;
 
 //This puts the questions up based upon what value y is (where in the array)
@@ -72,6 +72,8 @@ let checkA = function() {
     if (qNaList[y].answer1 === qNaList[y].Answer) {
         score += 1000;
         console.log(score);
+        y += 1;
+        runQuiz();
     }
     else {
         alert('Try Again, True Believers!');
@@ -82,6 +84,8 @@ let checkB = function() {
     if (qNaList[y].answer2 === qNaList[y].Answer) {
         score += 1000;
         console.log(score);
+        y += 1;
+        runQuiz();
     }
     else {
         alert('Try Again, True Believers!')
