@@ -7,6 +7,8 @@ let answer2Box = document.querySelector('.answer2');
 let userAnswer1 = document.querySelector('#option1');
 let userAnswer2 = document.querySelector('#option2');
 
+let score = 0;
+
 //Creating an array of objects here
 const qNaList = [
     {
@@ -44,16 +46,22 @@ const qNaList = [
     answer1: 'A: Korg',  
     answer2: 'B: Miek',
     Answer: 'A: Korg'
+    },
+    {
+    question: 'Here is your score!',
+    answer1: score,
+    answer2: 'Are you ready to Try Again?',
+    Answer: ''
     }
 ]
 //My counter for my array position and score tally;
 let y = 0;
-let score = 0;
+//let score = 0;
 
 //This puts the questions up based upon what value y is (where in the array)
 //Also adds the event listener that calls to check if what they selected was correct
 let runQuiz = function() {
-    if(y <= 6) {
+    if(y <= 5) {
         questionShow.innerText = qNaList[y].question;
         answer1Box.innerText = qNaList[y].answer1;
         answer2Box.innerText = qNaList[y].answer2;
@@ -64,6 +72,12 @@ let runQuiz = function() {
     }
     else{
         //Stop the game and tally total
+        questionShow.innerText = qNaList[y].question;
+        answer1Box.innerText = qNaList[y].answer1;
+        answer2Box.innerText = qNaList[y].answer2;
+
+        //   userAnswer1.addEventListener('click', reload);
+        //   userAnswer2.addEventListener('click', reload);
     }
 }
 
@@ -73,6 +87,8 @@ let checkA = function() {
         score += 1000;
         console.log(score);
         y += 1;
+        console.log(y);  //trying to find out what value y is each time
+        qNaList[6].answer1 = score;
         runQuiz();
     }
     else {
@@ -85,12 +101,16 @@ let checkB = function() {
         score += 1000;
         console.log(score);
         y += 1;
+        console.log(y);  //trying to find out what value y is each time
         runQuiz();
     }
     else {
-        alert('Try Again, True Believers!')
+        alert('Try Again, True Believer!')
     }
 }
+ let reload = function() {
+
+ }
 
 runQuiz();
 
