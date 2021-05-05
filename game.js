@@ -9,7 +9,7 @@ let userAnswer2 = document.querySelector('#option2');
 
 let score = 0;
 
-//Creating an array of objects here
+//Creating an array of objects here that holds my questions, answer options, and actual answers
 const qNaList = [
     {
     question: 'Are you ready to test your MCU Knowledge??',
@@ -79,11 +79,10 @@ let runQuiz = function() {
 
           userAnswer1.addEventListener('click', reload);
           userAnswer2.addEventListener('click', reload);
-    }
-        
+    }      
 }
 
-//Checks the answer based upon what button was picked
+//Checks the answer based upon the Select A option
 let checkA = function() {
     if (qNaList[y].answer1 === qNaList[y].Answer) {
         score += 1000;
@@ -97,7 +96,7 @@ let checkA = function() {
         alert('Try Again, True Believers!');
     }
 }
-
+//Checks the answer based upon the Select B option
 let checkB = function() {
     if (qNaList[y].answer2 === qNaList[y].Answer) {
         score += 1000;
@@ -116,11 +115,12 @@ let checkB = function() {
         alert('Try Again, True Believer!')
     }
 }
-
+//Function that reloads the web page once quiz is completed.
 let reload = function() {
     location.reload();
  }
 
+//Starts the whole shebang off to start taking input and giving output
 runQuiz();
 
 
