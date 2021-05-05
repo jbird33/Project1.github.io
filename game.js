@@ -51,7 +51,7 @@ const qNaList = [
     question: 'Here is your score!',
     answer1: score,
     answer2: 'Are you ready to Try Again?',
-    Answer: ''
+    Answer: 'reload'
     }
 ]
 //My counter for my array position and score tally;
@@ -75,10 +75,12 @@ let runQuiz = function() {
         questionShow.innerText = qNaList[y].question;
         answer1Box.innerText = qNaList[y].answer1;
         answer2Box.innerText = qNaList[y].answer2;
+        console.log('I am at this point here in the code')
 
-        //   userAnswer1.addEventListener('click', reload);
-        //   userAnswer2.addEventListener('click', reload);
+          userAnswer1.addEventListener('click', reload);
+          userAnswer2.addEventListener('click', reload);
     }
+        
 }
 
 //Checks the answer based upon what button was picked
@@ -104,12 +106,19 @@ let checkB = function() {
         console.log(y);  //trying to find out what value y is each time
         runQuiz();
     }
+    // else if(qNaList[y].answer2 != qNaList[y].Answer) {
+    //     alert('Try Again, True Believer!');
+    // }
+    // else if(qNaList[y].Answer === 'reload'){
+    //     location.reload();
+    // }
     else {
         alert('Try Again, True Believer!')
     }
 }
- let reload = function() {
 
+let reload = function() {
+    location.reload();
  }
 
 runQuiz();
