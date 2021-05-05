@@ -30,7 +30,6 @@ List of Technologies Used:
 Installation Instructions / Getting Started:
 
 To set up and use this application on your own system...
-
 1. Fork and clone the repository
 2. Open the index.html in your browser and enjoy
 
