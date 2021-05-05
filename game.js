@@ -92,7 +92,7 @@ let checkA = function() {
         qNaList[6].answer1 = score;
         runQuiz();
     }
-    else {
+    else if (y <=5) {
         alert('Try Again, True Believers!');
     }
 }
@@ -105,13 +105,7 @@ let checkB = function() {
         console.log(y);  //trying to find out what value y is each time
         runQuiz();
     }
-    // else if(qNaList[y].answer2 != qNaList[y].Answer) {
-    //     alert('Try Again, True Believer!');
-    // }
-    // else if(qNaList[y].Answer === 'reload'){
-    //     location.reload();
-    // }
-    else {
+    else if (y <= 5) {
         alert('Try Again, True Believer!')
     }
 }
