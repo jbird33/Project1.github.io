@@ -6,7 +6,8 @@ My project is a trivia game used to expand and showcase my learned skills in HTM
 It is also a way to not just test but, educate some Marvel movie buffs on some MCU knowledge. By the time the quiz is over, you should have gained some Marvel Movie substance.
 
 ## Brief Example:
-[my screenshot](H:\sei\projects\Project1.github.io\images\snapshot1)
+![image](https://user-images.githubusercontent.com/83088409/117207950-2dde5580-adba-11eb-8de6-91be6bd76b89.png)
+
 
 
 
