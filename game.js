@@ -86,7 +86,7 @@ const qNaList = [
     {
     question: 'Here is your score!',
     answer1: score,
-    answer2: 'Are you ready to Try Again?',
+    answer2: 'Are you ready to Try Again? Choose A or B',
     Answer: 'reload'
     }
 ]
