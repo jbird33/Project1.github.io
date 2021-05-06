@@ -12,6 +12,12 @@ let score = 0;
 //Creating an array of objects here that holds my questions, answer options, and actual answers
 const qNaList = [
     {
+    question: 'It is time to test your Asgardian knowledge. Choose correct to win some points, or choose wrong and only get half.',
+    answer1: 'Stay put and face the blip?',
+    answer2: 'Use the BiFrost and enter the MCU realm?',
+    Answer: 'Use the BiFrost and enter the MCU realm?'
+    },
+    {
     question: 'Are you ready to test your MCU Knowledge??',
     answer1: 'Excelsior!',
     answer2: 'Hulk says SMASH!',
@@ -61,7 +67,7 @@ let y = 0;
 //This puts the questions up based upon what value y is (where in the array)
 //Also adds the event listener that calls to check if what they selected was correct
 let runQuiz = function() {
-    if(y <= 5) {
+    if(y <= 6) {
         questionShow.innerText = qNaList[y].question;
         answer1Box.innerText = qNaList[y].answer1;
         answer2Box.innerText = qNaList[y].answer2;
@@ -85,27 +91,31 @@ let runQuiz = function() {
 //Checks the answer based upon the Select A option
 let checkA = function() {
     if (qNaList[y].answer1 === qNaList[y].Answer) {
-        score += 1000;
+        score += 1000000;
         console.log(score);
         y += 1;
         console.log(y);  //trying to find out what value y is each time
-        qNaList[6].answer1 = score;
+        qNaList[7].answer1 = score + ' Points!!';
         runQuiz();
     }
-    else if (y <=5) {
+    else if (y <=6) {
+        score = score - 500000;
+        console.log(score);
         alert('Try Again, True Believers!');
     }
 }
 //Checks the answer based upon the Select B option
 let checkB = function() {
     if (qNaList[y].answer2 === qNaList[y].Answer) {
-        score += 1000;
+        score += 1000000;
         console.log(score);
         y += 1;
         console.log(y);  //trying to find out what value y is each time
         runQuiz();
     }
-    else if (y <= 5) {
+    else if (y <= 6) {
+        score = score - 500000;
+        console.log(score);
         alert('Try Again, True Believer!')
     }
 }
