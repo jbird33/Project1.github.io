@@ -13,14 +13,14 @@ let score = 0;
 const qNaList = [
     {
     question: 'It is time to test your Asgardian knowledge. Choose correct to win some points, or choose wrong and only get half.',
-    answer1: 'Stay put and face the blip?',
-    answer2: 'Use the BiFrost and enter the MCU realm?',
-    Answer: 'Use the BiFrost and enter the MCU realm?'
+    answer1: '- Stay put and face the blip?',
+    answer2: '- Use the BiFrost and enter the MCU realm?',
+    Answer: '- Use the BiFrost and enter the MCU realm?'
     },
     {
     question: 'Are you ready to test your MCU Knowledge??',
     answer1: 'Excelsior!',
-    answer2: 'Hulk says SMASH!',
+    answer2: 'Hulk says NO SMASH!',
     Answer: 'Excelsior!'
     },
     {
@@ -60,9 +60,8 @@ const qNaList = [
     Answer: 'reload'
     }
 ]
-//My counter for my array position and score tally;
+//My counter for my array position;
 let y = 0;
-//let score = 0;
 
 //This puts the questions up based upon what value y is (where in the array)
 //Also adds the event listener that calls to check if what they selected was correct
@@ -95,7 +94,7 @@ let checkA = function() {
         console.log(score);
         y += 1;
         console.log(y);  //trying to find out what value y is each time
-        qNaList[7].answer1 = score + ' Points!!';
+        qNaList[7].answer1 = score + '/7000000 Points!!';
         runQuiz();
     }
     else if (y <=6) {
