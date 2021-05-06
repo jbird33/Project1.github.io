@@ -54,6 +54,36 @@ const qNaList = [
     Answer: 'A: Korg'
     },
     {
+    question: "6) What is Tony Stark's daughter name?",
+    answer1: 'A: Cassie',  
+    answer2: 'B: Morgan',
+    Answer: 'B: Morgan'
+    },
+    {
+    question: '7) In Spide-Man: Far From Home, where was Mysterio fired from?',
+    answer1: 'A: Stark Industries',  
+    answer2: 'B: Oscorp',
+    Answer: 'A: Stark Industries'
+    },
+    {
+    question: '8) In Black Panther, where did Killmonger grow up?',
+    answer1: 'A: Oakland, CA',  
+    answer2: 'B: Brooklyn, NY',
+    Answer: 'A: Oakland, CA'
+    },
+    {
+    question: "9) In Doctor Strange, where is Dormammu's home realm?",
+    answer1: 'A: Svartalfheim',  
+    answer2: 'B: The Dark Dimension',
+    Answer: 'B: The Dark Dimension'
+    },
+    {
+    question: "10) Sabretooth's real name displayed first in X2: X-Men United is?",
+    answer1: 'A: Victor Creed',  
+    answer2: 'B: Kurt Wagner',
+    Answer: 'A: Victor Creed'
+    },
+    {
     question: 'Here is your score!',
     answer1: score,
     answer2: 'Are you ready to Try Again?',
@@ -66,7 +96,7 @@ let y = 0;
 //This puts the questions up based upon what value y is (where in the array)
 //Also adds the event listener that calls to check if what they selected was correct
 let runQuiz = function() {
-    if(y <= 6) {
+    if(y <= 11) {
         questionShow.innerText = qNaList[y].question;
         answer1Box.innerText = qNaList[y].answer1;
         answer2Box.innerText = qNaList[y].answer2;
@@ -94,10 +124,10 @@ let checkA = function() {
         console.log(score);
         y += 1;
         console.log(y);  //trying to find out what value y is each time
-        qNaList[7].answer1 = score + '/7000000 Points!!';
+        qNaList[12].answer1 = score + '/12000000 Points!!';
         runQuiz();
     }
-    else if (y <=6) {
+    else if (y <= 11) {
         score = score - 500000;
         console.log(score);
         alert('Try Again, True Believers!');
@@ -112,7 +142,7 @@ let checkB = function() {
         console.log(y);  //trying to find out what value y is each time
         runQuiz();
     }
-    else if (y <= 6) {
+    else if (y <= 11) {
         score = score - 500000;
         console.log(score);
         alert('Try Again, True Believer!')
