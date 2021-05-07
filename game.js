@@ -20,7 +20,7 @@ const qNaList = [
     {
     question: 'Are you ready to test your MCU Knowledge??',
     answer1: 'Excelsior!',
-    answer2: 'Hulk says NO SMASH!',
+    answer2: 'Hulk says NOOOOOO!',
     Answer: 'Excelsior!'
     },
     {
